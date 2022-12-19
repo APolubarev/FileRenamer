@@ -3,7 +3,7 @@ import subprocess
 import sys
 
 if __name__ == '__main__':
-    # вот пример комментария
+
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pymediainfo'])
     from pymediainfo import MediaInfo
     directory = os.getcwd()
