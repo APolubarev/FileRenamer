@@ -10,7 +10,7 @@ if __name__ == '__main__':
     files = os.listdir(directory)
 
     for filename in files:
-        if filename.endswith('.MP4') and filename.startswith('GH'):
+        if filename.endswith('.MP4') or filename.endswith('.mp4') and filename.startswith('GH'):
             media_info = MediaInfo.parse(os.path.join(directory, filename))
             for track in media_info.tracks:
                 if track.track_type == "Video":
